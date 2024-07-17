@@ -3,14 +3,14 @@ def pprint():
     result.append(' '.join(map(str, arrayList)))
 
 
-def dfs(v, h):
+def dfs(h):
     if h == m:  # m이라면
         pprint()  # pprint함수
         return
 
-    for i in range(1, n+1):  # 1부터 n까지 반복
-        arrayList.append(array2[i-1])  # 1부터 시작했기에 i-1 넣고
-        dfs(i+1, h+1)  # 1씩 추가해주다가
+    for i in range(1, n+1):  # 1부터 n번 반복
+        arrayList.append(array2[i-1])  # 인덱스는 0부터기에
+        dfs(h+1)  # 1씩 추가해주다가
         arrayList.pop()  # m이 되면 pop
 
 
@@ -22,5 +22,5 @@ result = []  # 최종 결과물을 담은 배열
 visited = [False] * n  # visited 초기화
 
 
-dfs(1, 0)
+dfs(0)
 print('\n'.join(result))  # 결과 한번에 출력
