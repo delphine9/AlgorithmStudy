@@ -19,7 +19,6 @@ array = list(map(int, input().split()))  # list로 받기
 array2 = sorted(array)  # 받은 리스트 오름차순 정렬
 arrayList = []  # 넣었다 빼고 반복할 배열
 result = []  # 최종 결과물을 담은 배열
-visited = [False] * n  # visited 초기화
 
 
 dfs(1, 0)
