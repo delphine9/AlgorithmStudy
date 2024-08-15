@@ -5,7 +5,7 @@ for i in range(n):
     s, e = map(int, input().split())
     Mt.append((s, e))
 
-Mt.sort(key=lambda Mt: Mt[0])  # 선 종료 시간을 기준으로 정렬
+Mt.sort(key=lambda Mt: Mt[0])  # 선 시작 시간을 기준으로 정렬
 Mt.sort(key=lambda Mt: Mt[1])  # 후 종료 시간을 기준으로 정렬
 
 time = []
